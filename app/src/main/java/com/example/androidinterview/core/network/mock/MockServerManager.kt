@@ -1,4 +1,4 @@
-package com.example.androidinterview.mock
+package com.example.androidinterview.core.network.mock
 
 import okhttp3.mockwebserver.MockWebServer
 

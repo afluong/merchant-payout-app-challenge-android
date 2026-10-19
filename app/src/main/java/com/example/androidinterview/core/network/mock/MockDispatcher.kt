@@ -1,9 +1,10 @@
-package com.example.androidinterview.mock
+package com.example.androidinterview.core.network.mock
 
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.RecordedRequest
 import org.json.JSONObject
+import java.time.Instant
 
 internal class MockDispatcher : Dispatcher() {
 
@@ -125,7 +126,7 @@ internal class MockDispatcher : Dispatcher() {
           "amount": $amount,
           "currency": "$currency",
           "iban": "$iban",
-          "created_at": "${java.time.Instant.ofEpochMilli(createdAt)}"
+          "created_at": "${Instant.ofEpochMilli(createdAt)}"
         }
     """.trimIndent()
 }
